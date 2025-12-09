@@ -1,0 +1,17 @@
+// Bootstrap CSS completo (en lugar de Sass)
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+// Slick Carousel
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+// LightGallery
+@import 'lightgallery/css/lightgallery.css';
+@import 'lightgallery/css/lg-zoom.css';
+@import 'lightgallery/css/lg-thumbnail.css';
+
+// RSuite
+@import 'rsuite/dist/rsuite.min.css';
+
+// Tus estilos personalizados
+@import '../sass/style.scss';
