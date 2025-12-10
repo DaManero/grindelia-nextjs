@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useEffect } from "react";
 import PageHeadingSection from "../Section/PageHeadingSection";
@@ -30,7 +30,7 @@ const facilityData = [
     imgUrl: "/images/pool_service_thumb_1.webp",
     title: "El diseño de una piscina es primordial para su atractivo",
     subTitle: "DISEÑO MODERNO DE PISCINA",
-    description: `El diseño de una piscina es primordial para su atractivo, con factores como tamaño, forma y entorno que juegan un papel crucial en la creación de la atmósfera deseada. Ya sea una elegante piscina infinita con vista a la naturaleza y apta para toda la familia.`,
+    description: `El diseño de una piscina es primordial para su atractivo, con factores como tamaño, forma y entorno que juegan un papel crucial en la creación de la atmósfera deseada. Ya sea una elegante piscina con vista a la naturaleza y apta para toda la familia.`,
   },
   {
     imgUrl: "/images/pool_service_thumb_2.webp",
