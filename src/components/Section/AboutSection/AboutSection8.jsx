@@ -1,5 +1,5 @@
-import React from 'react';
-import SectionHeading from '../../SectionHeading';
+import React from "react";
+import SectionHeading from "../../SectionHeading";
 
 export default function AboutSection8({
   sectionTitle,
@@ -8,6 +8,9 @@ export default function AboutSection8({
   imgUrl1,
   imgUrl2,
   imgUrl3,
+  altText1,
+  altText2,
+  altText3,
 }) {
   return (
     <>
@@ -31,13 +34,13 @@ export default function AboutSection8({
         </div>
         <div className="cs_image_layer_in">
           <div className="cs_image_layer_item">
-            <img src={imgUrl1} alt="Dine" />
+            <img src={imgUrl1} alt={altText1 || "Grindelia Apart Hotel"} />
           </div>
           <div className="cs_image_layer_item">
-            <img src={imgUrl2} alt="Dine" />
+            <img src={imgUrl2} alt={altText2 || "Grindelia Apart Hotel"} />
           </div>
           <div className="cs_image_layer_item">
-            <img src={imgUrl3} alt="Dine" />
+            <img src={imgUrl3} alt={altText3 || "Grindelia Apart Hotel"} />
           </div>
         </div>
       </div>

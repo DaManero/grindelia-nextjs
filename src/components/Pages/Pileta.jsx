@@ -64,6 +64,9 @@ export default function PiletaPage() {
           imgUrl1="/images/pool_img_2.webp"
           imgUrl2="/images/pool_img_1.webp"
           imgUrl3="/images/pool_img_3.webp"
+          altText1="Pileta climatizada infinity pool Grindelia Apart Hotel Mar de las Pampas"
+          altText2="Vista panorámica pileta y quincho en Grindelia Las Gaviotas"
+          altText3="Área de pileta y reposeras Grindelia Apart Hotel"
         />
       </Section>
       <Section

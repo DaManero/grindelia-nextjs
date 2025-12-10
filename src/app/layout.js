@@ -1,6 +1,8 @@
 import "./globals.scss";
 import FloatingWhatsApp from "@/components/Global/FloatingWhatsApp";
 import MetaPixel from "@/components/MetaPixel";
+import HotelSchema from "@/components/Schema/HotelSchema";
+import LocalBusinessSchema from "@/components/Schema/LocalBusinessSchema";
 
 export const metadata = {
   title: "Grindelia Apart Hotel & Spa | Eco Resort Mar de las Pampas",
@@ -37,6 +39,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
+      <head>
+        <HotelSchema />
+        <LocalBusinessSchema />
+      </head>
       <body>
         <MetaPixel />
         {children}

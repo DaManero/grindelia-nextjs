@@ -2,9 +2,12 @@ import SpaWellnessPage from "@/components/Pages/SpaWellnessPage";
 import Layout7 from "@/components/Layout/Layout7";
 
 export const metadata = {
-  title: "Spa & Wellness | Grindelia Apart Hotel & Spa",
+  title: "Spa & Wellness Center | Masajes y Sauna en Mar de las Pampas",
   description:
-    "Relajate en nuestro spa y wellness center con tratamientos exclusivos.",
+    "Relajate en nuestro spa wellness con masajes terapéuticos, sauna finlandesa y circuitos de hidromasaje. Tratamientos exclusivos de bienestar en Grindelia Apart Hotel & Spa, Mar de las Pampas.",
+  alternates: {
+    canonical: "https://grindelia.com.ar/spa-wellness",
+  },
 };
 
 export default function SpaWellness() {
