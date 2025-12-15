@@ -153,7 +153,7 @@ const facilityData = [
       btnUrl: "/spa-wellness",
     },
     {
-      imgUrl: "/images/Feature_img_2a.webp",
+      imgUrl: "/images/Feature_img_2.webp",
       title: '<span style="color:#798a74">Pileta, Quincho<br/>y Paddle</span>',
       subTitle:
         "Pileta climatizada todo el año, quincho para 30 personas y cancha de paddle, con equipamiento para eventos, actividades y celebraciones en un entorno seguro y agradable.",
@@ -240,7 +240,7 @@ const galleryData = [
   { imgUrl: "/images/Gallery_1.webp", title: "Pileta" },
   { imgUrl: "/images/Gallery_2.webp", title: "Niños" },
   { imgUrl: "/images/Gallery_3.webp", title: "Modo Relax" },
-  { imgUrl: "/images/Gallery_4.webp", title: "Modo Work" },
+  { imgUrl: "/images/Gallery_4.webp", title: "Modo Conford" },
 ];
 
 const blogData = [
