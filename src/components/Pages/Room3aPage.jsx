@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useEffect } from "react";
 import Section from "../Section";
@@ -16,6 +16,13 @@ Baño completo y amenities de alta calidad.
 Superficie cubierta de 60 m² y descubierta de 18 m², diseñada para confort y funcionalidad. 
 Incluye servicio Grindelia: desayuno diario, limpieza y acceso a piscina y spa. 
 Atención al huésped disponible para resolver cualquier necesidad durante tu estadía.`,
+
+  breakfastTitle: "Desayuno",
+  breakfastInfo: `Incluye desayuno únicamente con envío a los departamentos. Horario: 08:00 a 11:00 hs.`,
+
+  cleaningTitle: "Limpieza",
+  cleaningInfo: `Horario: de 9:00 a 14:00 hs. Incluye orden del apart, recambio de sábanas y toallas según política vigente.
+El servicio de limpieza diario no incluye lavado de vajilla. Cada unidad cuenta con los elementos necesarios para su uso y limpieza.`,
 
   roomFacilitiesTitle: "Comodidades",
   roomFacilities: [
@@ -96,12 +103,16 @@ const roomData = [
 ];
 
 const galleryData = [
-  { imgUrlLg: "/images/room_lg_7.webp", imgUrlSm: "/images/room_sm_7.webp" },
-  { imgUrlLg: "/images/room_lg_8.webp", imgUrlSm: "/images/room_sm_8.webp" },
-  { imgUrlLg: "/images/room_lg_9.webp", imgUrlSm: "/images/room_sm_9.webp" },
-  { imgUrlLg: "/images/room_lg_10.webp", imgUrlSm: "/images/room_sm_10.webp" },
   { imgUrlLg: "/images/room_lg_11.webp", imgUrlSm: "/images/room_sm_11.webp" },
   { imgUrlLg: "/images/room_lg_12.webp", imgUrlSm: "/images/room_sm_12.webp" },
+  { imgUrlLg: "/images/room_lg_13.webp", imgUrlSm: "/images/room_sm_13.webp" },
+  { imgUrlLg: "/images/room_lg_14.webp", imgUrlSm: "/images/room_sm_14.webp" },
+  { imgUrlLg: "/images/room_lg_15.webp", imgUrlSm: "/images/room_sm_15.webp" },
+  { imgUrlLg: "/images/room_lg_16.webp", imgUrlSm: "/images/room_sm_16.webp" },
+  { imgUrlLg: "/images/room_lg_17.webp", imgUrlSm: "/images/room_sm_17.webp" },
+  { imgUrlLg: "/images/room_lg_18.webp", imgUrlSm: "/images/room_sm_18.webp" },
+  { imgUrlLg: "/images/room_lg_19.webp", imgUrlSm: "/images/room_sm_19.webp" },
+  { imgUrlLg: "/images/room_lg_20.webp", imgUrlSm: "/images/room_sm_20.webp" },
 ];
 
 export default function RoomDetailsPageV2() {
@@ -138,10 +149,15 @@ export default function RoomDetailsPageV2() {
             .room2a-row { column-gap: 40px; }
             .room2a-right { padding-left: 40px; }
           }
-          /* Compactar bullets de Comodidades */
+          /* Compactar bullets de Comodidades - una sola columna */
+          .room2a-right .cs_list.cs_style_3 {
+            grid-template-columns: 1fr !important;
+            display: grid !important;
+            grid-gap: 18px !important;
+          }
           .room2a-right .cs_list.cs_style_3 li {
-            margin-bottom: 6px;
-            line-height: 1.35;
+            margin-bottom: 0;
+            line-height: 1.3;
             padding-top: 0;
             padding-bottom: 0;
           }
@@ -166,7 +182,7 @@ export default function RoomDetailsPageV2() {
         `}</style>
         <div className="container">
           <div className="row cs_gap_y_40 align-items-start room2a-row">
-            <div className="col-lg-6 room2a-left">
+            <div className="col-lg-8 room2a-left">
               <div className="cs_room_details">
                 <h3 className="cs_fs_38 cs_mb_29 cs_mb_lg_20">
                   Sobre el Alojamiento
@@ -181,12 +197,45 @@ export default function RoomDetailsPageV2() {
                 >
                   {roomDetailsData.detailes}
                 </p>
+
+                {/* Desayuno */}
+                <h3 className="cs_fs_31 cs_mb_20 cs_mb_lg_15">
+                  {roomDetailsData.breakfastTitle}
+                </h3>
+                <p
+                  className="cs_mb_35 cs_mb_lg_25"
+                  style={{
+                    textAlign: "justify",
+                    textJustify: "inter-word",
+                    hyphens: "auto",
+                  }}
+                >
+                  {roomDetailsData.breakfastInfo}
+                </p>
+
+                {/* Limpieza */}
+                <h3 className="cs_fs_31 cs_mb_20 cs_mb_lg_15">
+                  {roomDetailsData.cleaningTitle}
+                </h3>
+                <p
+                  className="cs_mb_0"
+                  style={{
+                    textAlign: "justify",
+                    textJustify: "inter-word",
+                    hyphens: "auto",
+                  }}
+                >
+                  {roomDetailsData.cleaningInfo}
+                </p>
               </div>
             </div>
-            <div className="col-lg-6 room2a-right">
+            <div className="col-lg-4 room2a-right">
               <div className="cs_room_details">
                 <h3 className="cs_fs_31 cs_mb_29 cs_mb_lg_20">Comodidades</h3>
-                <ul className="cs_list cs_style_3 cs_mp_0">
+                <ul
+                  className="cs_list cs_style_3 cs_mp_0"
+                  style={{ columns: 1 }}
+                >
                   {/* Huéspedes (unificado al mismo estilo que el resto) */}
                   <li>
                     <img src="/images/icons/review.svg" alt="Huéspedes" />
@@ -214,8 +263,7 @@ export default function RoomDetailsPageV2() {
                       src="/images/icons/swimmer.svg"
                       alt="Servicio de Playa"
                     />
-                    Servicio de Playa en tempoarada (reposeras y equipos de
-                    playa)
+                    Reposeras para la playa
                   </li>
                 </ul>
               </div>

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useEffect } from "react";
 import HeroSection from "../Section/HeroSection";
@@ -30,7 +30,7 @@ const heroData = [
 
 const aboutData = {
   title:
-    "Eco Apart Hotel & Spa Premium, diseñado con tecnologías sustentables que reducen el impacto ambiental, fusionando confort, naturaleza y elegancia en un entorno responsable y armónico.",
+    "Eco Apart Hotel & Spa diseñado sustentablemente, fusionando confort, naturaleza y elegancia en armonía ambiental",
   subTitle: "Porqué elegirnos",
   imgUrl: "/images/icons/cta_icon_1.svg",
   btnText: "Leer más",
@@ -445,9 +445,7 @@ export default function HomePage() {
           role="img"
           aria-label="Vista destacada del Eco Apart Hotel & Spa"
           style={{
-            backgroundImage: `url(${
-              ""
-            }images/home_parallax_2400.webp)`,
+            backgroundImage: `url(${""}images/home_parallax_2400.webp)`,
           }}
         >
           <div className="home_parallax_overlay" />

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useEffect } from "react";
 import Section from "../Section";
@@ -9,6 +9,14 @@ const roomDetailsData = {
   title2: "Sobre el Alojamiento",
   detailes:
     "Unidades de 2 ambientes con terraza privada tipo deck y parrilla (adatpadas para personas con discapacidad), ideales para disfrutar al aire libre. El living-comedor se integra con la terraza, aportando luminosidad y vistas despejadas. Cocina completa y equipada con electrodomésticos modernos para mayor comodidad y autonomía. Dormitorio en suite con jacuzzi y vestidor; además dos dormitorios amplios con placares empotrados y ropa de cama premium para un descanso reparador. Baño completo con hidromasaje y amenities de alta calidad. Superficie cubierta de 60 m² y descubierta de 18 m², diseñada para confort y funcionalidad. Incluye servicio Grindelia: desayuno diario, limpieza y acceso a piscina y spa; atención al huésped disponible para resolver cualquier necesidad durante tu estadía.",
+
+  breakfastTitle: "Desayuno",
+  breakfastInfo: `Incluye desayuno únicamente con envío a los departamentos. Horario: 08:00 a 11:00 hs.`,
+
+  cleaningTitle: "Limpieza",
+  cleaningInfo: `Horario: de 9:00 a 14:00 hs. Incluye orden del apart, recambio de sábanas y toallas según política vigente.
+El servicio de limpieza diario no incluye lavado de vajilla. Cada unidad cuenta con los elementos necesarios para su uso y limpieza.`,
+
   roomFacilitiesTitle: "Comodidades",
   roomFacilities: [
     { iconUrl: "/images/icons/facility_icon_1.svg", title: "Cama Queen size" },
@@ -89,12 +97,16 @@ const roomData = [
 ];
 
 const galleryData = [
-  { imgUrlLg: "/images/room_lg_3.webp", imgUrlSm: "/images/room_sm_3.webp" },
-  { imgUrlLg: "/images/room_lg_2.webp", imgUrlSm: "/images/room_sm_2.webp" },
-  { imgUrlLg: "/images/room_lg_1.webp", imgUrlSm: "/images/room_sm_1.webp" },
-  { imgUrlLg: "/images/room_lg_4.webp", imgUrlSm: "/images/room_sm_4.webp" },
-  { imgUrlLg: "/images/room_lg_5.webp", imgUrlSm: "/images/room_sm_5.webp" },
   { imgUrlLg: "/images/room_lg_6.webp", imgUrlSm: "/images/room_sm_6.webp" },
+  { imgUrlLg: "/images/room_lg_1.webp", imgUrlSm: "/images/room_sm_1.webp" },
+  { imgUrlLg: "/images/room_lg_2.webp", imgUrlSm: "/images/room_sm_2.webp" },
+  { imgUrlLg: "/images/room_lg_3.webp", imgUrlSm: "/images/room_sm_3.webp" },
+  { imgUrlLg: "/images/room_lg_5.webp", imgUrlSm: "/images/room_sm_5.webp" },
+  { imgUrlLg: "/images/room_lg_4.webp", imgUrlSm: "/images/room_sm_4.webp" },
+  { imgUrlLg: "/images/room_lg_7.webp", imgUrlSm: "/images/room_sm_7.webp" },
+  { imgUrlLg: "/images/room_lg_8.webp", imgUrlSm: "/images/room_sm_8.webp" },
+  { imgUrlLg: "/images/room_lg_9.webp", imgUrlSm: "/images/room_sm_9.webp" },
+  { imgUrlLg: "/images/room_lg_10.webp", imgUrlSm: "/images/room_sm_10.webp" },
 ];
 
 export default function RoomDetailsPageV2() {
@@ -122,66 +134,50 @@ export default function RoomDetailsPageV2() {
         bottomSpaceMd="0"
         className="room2a-standardize"
       >
-        {/* Estilos alineados a Room3aPage y íconos en negro */}
+        {/* Estilos locales para separación, color y normalización de íconos */}
         <style>{`
-          .room2a-standardize .cs_room_details h3 {
-            margin-bottom:26px;
-            color:#2e2f2b;
+          @media (min-width: 992px) {
+            .room2a-row { column-gap: 32px; flex-wrap: nowrap; }
+            .room2a-right { padding-left: 32px; }
           }
-          .room2a-standardize .cs_room_details p {
-            color:#6b6b68;
-            line-height:1.65;
-            font-size:15px;
-            margin-bottom:42px;
+          @media (min-width: 1200px) {
+            .room2a-row { column-gap: 40px; }
+            .room2a-right { padding-left: 40px; }
           }
-          .room2a-standardize .cs_list.cs_style_3 {
-            margin:0;
-            padding:0;
+          /* Compactar bullets de Comodidades - una sola columna */
+          .room2a-right .cs_list.cs_style_3 {
+            grid-template-columns: 1fr !important;
+            display: grid !important;
+            grid-gap: 18px !important;
           }
-          .room2a-standardize .cs_list.cs_style_3 li {
-            display:flex;
-            align-items:center;
-            gap:12px;
-            margin:0 0 12px 0;
-            line-height:1.5;
-            color:#6b6b68;
-            font-size:15px;
+          .room2a-right .cs_list.cs_style_3 li {
+            margin-bottom: 0;
+            line-height: 1.3;
+            padding-top: 0;
+            padding-bottom: 0;
           }
-          .room2a-standardize .cs_list.cs_style_3 li:last-child {
-            margin-bottom:0;
+          /* Unificar tamaño/alineación y color (gris oscuro) de todos los íconos */
+          .room2a-right .cs_list.cs_style_3 li img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            vertical-align: middle;
+            object-fit: contain;
+            filter: grayscale(1) brightness(0.35) contrast(1.1); /* unifica color */
           }
-          .room2a-standardize .cs_list.cs_style_3 li img,
-          .room2a-standardize .cs_list.cs_style_3 li svg {
-            width:22px;
-            height:22px;
-            flex:0 0 22px;
-            object-fit:contain;
-            filter:brightness(0) saturate(100%);
+          /* Color más oscuro para textos */
+          .room2a-left .cs_room_details p {
+            color: #4b4b49;
           }
-          /* Más separación lateral entre columnas */
-          .room2a-standardize .room2a-bullets-pad {
-            padding-left:46px;
-          }
-          @media (min-width:1200px){
-            .room2a-standardize .room2a-bullets-pad {
-              padding-left:60px;
-            }
-          }
-          @media (max-width:991px){
-            .room2a-standardize .room2a-bullets-pad {
-              padding-left:0;
-              margin-top:10px;
-            }
-          }
-          @media (max-width:991px){
-            .room2a-standardize .cs_room_details p { margin-bottom:30px; }
-            .room2a-standardize .cs_room_details h3 { margin-bottom:20px; }
-            .room2a-standardize .cs_list.cs_style_3 li { margin-bottom:10px; }
+          .room2a-right .cs_list.cs_style_3,
+          .room2a-right .cs_list.cs_style_3 li,
+          .room2a-right .cs_list.cs_style_3 li span {
+            color: #4b4b49;
           }
         `}</style>
         <div className="container">
-          <div className="row cs_gap_y_40 align-items-start">
-            <div className="col-lg-6">
+          <div className="row cs_gap_y_40 align-items-start room2a-row">
+            <div className="col-lg-8 room2a-left">
               <div className="cs_room_details">
                 <h3 className="cs_fs_38 cs_mb_29 cs_mb_lg_20">
                   Sobre el Alojamiento
@@ -196,38 +192,73 @@ export default function RoomDetailsPageV2() {
                 >
                   {roomDetailsData.detailes}
                 </p>
+
+                {/* Desayuno */}
+                <h3 className="cs_fs_31 cs_mb_20 cs_mb_lg_15">
+                  {roomDetailsData.breakfastTitle}
+                </h3>
+                <p
+                  className="cs_mb_35 cs_mb_lg_25"
+                  style={{
+                    textAlign: "justify",
+                    textJustify: "inter-word",
+                    hyphens: "auto",
+                  }}
+                >
+                  {roomDetailsData.breakfastInfo}
+                </p>
+
+                {/* Limpieza */}
+                <h3 className="cs_fs_31 cs_mb_20 cs_mb_lg_15">
+                  {roomDetailsData.cleaningTitle}
+                </h3>
+                <p
+                  className="cs_mb_0"
+                  style={{
+                    textAlign: "justify",
+                    textJustify: "inter-word",
+                    hyphens: "auto",
+                  }}
+                >
+                  {roomDetailsData.cleaningInfo}
+                </p>
               </div>
             </div>
-            <div className="col-lg-6 room2a-bullets-pad">
+            <div className="col-lg-4 room2a-right">
               <div className="cs_room_details">
                 <h3 className="cs_fs_31 cs_mb_29 cs_mb_lg_20">Comodidades</h3>
-                <ul className="cs_list cs_style_3 cs_mp_0">
+                <ul
+                  className="cs_list cs_style_3 cs_mp_0"
+                  style={{ columns: 1 }}
+                >
+                  {/* Huéspedes (unificado al mismo estilo que el resto) */}
                   <li>
                     <img src="/images/icons/review.svg" alt="Huéspedes" />
                     hasta 3 huéspedes
                   </li>
+                  {/* ...existing code... */}
                   {roomDetailsData.roomFacilities
-                    .filter((item) => {
-                      const t = item.title.toLowerCase();
+                    ?.filter((item) => {
+                      const t = (item.title || "").toLowerCase();
                       return !(
                         t.includes("locker") ||
                         t.includes("escritorio") ||
                         t.includes("lavander")
                       );
                     })
-                    .map((item, i) => (
-                      <li key={i}>
-                        <img src={item.iconUrl} alt={item.title} />
+                    .map((item, index) => (
+                      <li key={index}>
+                        <img src={item.iconUrl} alt="Icon" />
                         {item.title}
                       </li>
                     ))}
+                  {/* Servicio de Playa (unificado al mismo estilo) */}
                   <li>
                     <img
                       src="/images/icons/swimmer.svg"
                       alt="Servicio de Playa"
                     />
-                    Servicio de Playa en tempoarada (reposeras y equipos de
-                    playa)
+                    Reposeras para la playa
                   </li>
                 </ul>
               </div>
