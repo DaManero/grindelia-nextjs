@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useEffect, useState } from "react";
 import PageHeadingSection from "../Section/PageHeadingSection";
@@ -7,103 +7,303 @@ import Section from "../Section";
 const galleryData = [
   // Todas las imágenes deben existir en /public/images con tamaño 832x930
   {
-    imgUrl: "/images/gallery_01.webp",
-    title: "Suites",
-    category: "Pileta",
-  },
-  {
-    imgUrl: "/images/gallery_02.webp",
-    title: "Suites",
-    category: "Cowork",
-  },
-  {
-    imgUrl: "/images/gallery_03.webp",
-    title: "Suites",
-    category: "Spa",
-  },
-  {
-    imgUrl: "/images/gallery_04.webp",
+    imgUrl: "/images/galleri-01.webp",
     title: "Suites",
     category: "Habitaciones",
   },
   {
-    imgUrl: "/images/gallery_05.webp",
-    title: "Suites",
-    category: "Pileta",
-  },
-  {
-    imgUrl: "/images/gallery_06.webp",
-    title: "Suites",
-    category: "Espacios Verdes",
-  },
-  {
-    imgUrl: "/images/gallery_07.webp",
-    title: "Suites",
-    category: "Cowork",
-  },
-  {
-    imgUrl: "/images/gallery_08.webp",
-    title: "Suites",
-    category: "Spa",
-  },
-  {
-    imgUrl: "/images/gallery_09.webp",
+    imgUrl: "/images/galleri-02.webp",
     title: "Suites",
     category: "Habitaciones",
   },
   {
-    imgUrl: "/images/gallery_10.webp",
-    title: "Suites",
-    category: "Pileta",
-  },
-  {
-    imgUrl: "/images/gallery_11.webp",
-    title: "Suites",
-    category: "Espacios Verdes",
-  },
-  {
-    imgUrl: "/images/gallery_12.webp",
-    title: "Suites",
-    category: "Cowork",
-  },
-  {
-    imgUrl: "/images/gallery_13.webp",
-    title: "Suites",
-    category: "Spa",
-  },
-  {
-    imgUrl: "/images/gallery_14.webp",
+    imgUrl: "/images/galleri-03.webp",
     title: "Suites",
     category: "Habitaciones",
   },
   {
-    imgUrl: "/images/gallery_15.webp",
+    imgUrl: "/images/galleri-04.webp",
     title: "Suites",
+    category: "Habitaciones",
+  },
+  {
+    imgUrl: "/images/galleri-05.webp",
+    title: "Suites",
+    category: "Habitaciones",
+  },
+  {
+    imgUrl: "/images/galleri-06.webp",
+    title: "Suites",
+    category: "Habitaciones",
+  },
+  {
+    imgUrl: "/images/galleri-07.webp",
+    title: "Suites",
+    category: "Habitaciones",
+  },
+  {
+    imgUrl: "/images/galleri-08.webp",
+    title: "Suites",
+    category: "Habitaciones",
+  },
+  {
+    imgUrl: "/images/galleri-09.webp",
+    title: "Suites",
+    category: "Habitaciones",
+  },
+  {
+    imgUrl: "/images/galleri-10.webp",
+    title: "Suites",
+    category: "Habitaciones",
+  },
+  {
+    imgUrl: "/images/galleri-11.webp",
+    title: "Suites",
+    category: "Habitaciones",
+  },
+  {
+    imgUrl: "/images/galleri-12.webp",
+    title: "Suites",
+    category: "Habitaciones",
+  },
+  {
+    imgUrl: "/images/galleri-13.webp",
+    title: "Suites",
+    category: "Habitaciones",
+  },
+  {
+    imgUrl: "/images/galleri-14.webp",
+    title: "Suites",
+    category: "Habitaciones",
+  },
+  {
+    imgUrl: "/images/galleri-15.webp",
+    title: "Suites",
+    category: "Habitaciones",
+  },
+  {
+    imgUrl: "/images/galleri-16.webp",
+    title: "Suites",
+    category: "Habitaciones",
+  },
+  {
+    imgUrl: "/images/galleri-17.webp",
+    title: "Suites",
+    category: "Habitaciones",
+  },
+  {
+    imgUrl: "/images/galleri-18.webp",
+    title: "Suites",
+    category: "Habitaciones",
+  },
+  {
+    imgUrl: "/images/galleri-19.webp",
+    title: "Suites",
+    category: "Habitaciones",
+  },
+  {
+    imgUrl: "/images/galleri-20.webp",
+    title: "Piscina",
     category: "Pileta",
   },
   {
-    imgUrl: "/images/gallery_16.webp",
-    title: "Balcones Suites",
+    imgUrl: "/images/galleri-21.webp",
+    title: "Piscina",
+    category: "Pileta",
+  },
+  {
+    imgUrl: "/images/galleri-22.webp",
+    title: "Piscina",
+    category: "Pileta",
+  },
+  {
+    imgUrl: "/images/galleri-23.webp",
+    title: "Piscina",
+    category: "Pileta",
+  },
+  {
+    imgUrl: "/images/galleri-24.webp",
+    title: "Piscina",
+    category: "Pileta",
+  },
+  {
+    imgUrl: "/images/galleri-25.webp",
+    title: "Piscina",
+    category: "Pileta",
+  },
+  {
+    imgUrl: "/images/galleri-26.webp",
+    title: "Piscina",
+    category: "Pileta",
+  },
+  {
+    imgUrl: "/images/galleri-27.webp",
+    title: "Piscina",
+    category: "Pileta",
+  },
+  {
+    imgUrl: "/images/galleri-28.webp",
+    title: "Piscina",
+    category: "Pileta",
+  },
+  {
+    imgUrl: "/images/galleri-29.webp",
+    title: "Piscina",
+    category: "Pileta",
+  },
+  {
+    imgUrl: "/images/galleri-30.webp",
+    title: "Piscina",
+    category: "Pileta",
+  },
+  {
+    imgUrl: "/images/galleri-31.webp",
+    title: "Piscina",
+    category: "Pileta",
+  },
+  {
+    imgUrl: "/images/galleri-32.webp",
+    title: "Piscina",
+    category: "Pileta",
+  },
+  {
+    imgUrl: "/images/galleri-33.webp",
+    title: "Piscina",
+    category: "Pileta",
+  },
+  {
+    imgUrl: "/images/galleri-34.webp",
+    title: "Piscina",
+    category: "Pileta",
+  },
+  {
+    imgUrl: "/images/galleri-35.webp",
+    title: "Gimnasio",
+    category: "Gimnasio",
+  },
+  {
+    imgUrl: "/images/galleri-36.webp",
+    title: "Gimnasio",
+    category: "Gimnasio",
+  },
+  {
+    imgUrl: "/images/galleri-37.webp",
+    title: "Gimnasio",
+    category: "Gimnasio",
+  },
+  {
+    imgUrl: "/images/galleri-38.webp",
+    title: "Gimnasio",
+    category: "Gimnasio",
+  },
+  {
+    imgUrl: "/images/galleri-39.webp",
+    title: "Gimnasio",
+    category: "Gimnasio",
+  },
+  {
+    imgUrl: "/images/galleri-40.webp",
+    title: "Gimnasio",
+    category: "Gimnasio",
+  },
+  {
+    imgUrl: "/images/galleri-41.webp",
+    title: "Gimnasio",
+    category: "Gimnasio",
+  },
+  {
+    imgUrl: "/images/galleri-42.webp",
+    title: "Gimnasio",
+    category: "Gimnasio",
+  },
+  {
+    imgUrl: "/images/galleri-43.webp",
+    title: "Gimnasio",
+    category: "Gimnasio",
+  },
+  {
+    imgUrl: "/images/galleri-44.webp",
+    title: "Gimnasio",
+    category: "Gimnasio",
+  },
+  {
+    imgUrl: "/images/galleri-45.webp",
+    title: "Spa",
+    category: "Spa",
+  },
+  {
+    imgUrl: "/images/galleri-46.webp",
+    title: "Habitaciones",
+    category: "Habitaciones",
+  },
+  {
+    imgUrl: "/images/galleri-47.webp",
+    title: "Piscina",
+    category: "Pileta",
+  },
+  {
+    imgUrl: "/images/galleri-48.webp",
+    title: "Espacios Verdes",
     category: "Espacios Verdes",
   },
   {
-    imgUrl: "/images/gallery_17.webp",
-    title: "Espacios de trabajo y relax",
+    imgUrl: "/images/galleri-49.webp",
+    title: "Cowork",
     category: "Cowork",
   },
   {
-    imgUrl: "/images/gallery_18.webp",
-    title: "Spa & Bienestar",
+    imgUrl: "/images/galleri-50.webp",
+    title: "Spa",
     category: "Spa",
   },
   {
-    imgUrl: "/images/gallery_19.webp",
-    title: "Spa & Bienestar",
+    imgUrl: "/images/galleri-51.webp",
+    title: "Habitaciones",
+    category: "Habitaciones",
+  },
+  {
+    imgUrl: "/images/galleri-52.webp",
+    title: "Piscina",
+    category: "Pileta",
+  },
+  {
+    imgUrl: "/images/galleri-53.webp",
+    title: "Espacios Verdes",
+    category: "Espacios Verdes",
+  },
+  {
+    imgUrl: "/images/galleri-54.webp",
+    title: "Cowork",
+    category: "Cowork",
+  },
+  {
+    imgUrl: "/images/galleri-55.webp",
+    title: "Spa",
     category: "Spa",
   },
   {
-    imgUrl: "/images/gallery_20.webp",
-    title: "Espacios de trabajo y relax",
+    imgUrl: "/images/galleri-56.webp",
+    title: "Habitaciones",
+    category: "Habitaciones",
+  },
+  {
+    imgUrl: "/images/galleri-57.webp",
+    title: "Piscina",
+    category: "Pileta",
+  },
+  {
+    imgUrl: "/images/galleri-58.webp",
+    title: "Espacios Verdes",
+    category: "Espacios Verdes",
+  },
+  {
+    imgUrl: "/images/galleri-59.webp",
+    title: "Cowork",
+    category: "Cowork",
+  },
+  {
+    imgUrl: "/images/galleri-60.webp",
+    title: "Spa",
     category: "Spa",
   },
 ];
@@ -113,12 +313,13 @@ export default function GalleryPage() {
     document.body.classList.remove("cs_dark");
   }, []);
 
-  const filtersEnabled = false; // deshabilita filtros momentáneamente
+  const filtersEnabled = true; // filtros activados
 
   const categories = [
     "Todas",
     "Habitaciones",
     "Pileta",
+    "Gimnasio",
     "Espacios Verdes",
     "Cowork",
     "Spa",
