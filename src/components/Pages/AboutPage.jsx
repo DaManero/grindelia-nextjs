@@ -7,7 +7,7 @@ import Section from "../Section";
 import FeatureSection6 from "../Section/FeatureSection/FeatureSection6";
 
 const aboutData = {
-  title: `<span style="color:#798A74">Complejo sustentable en Las Gaviotas, a 300 mts del mar. Diseño bioclimático que minimiza el impacto ambiental, reduce consumo energético y prioriza el confort en armonía con la naturaleza.</span>`,
+  title: `<span style="color:#798A74">Complejo sustentable en Las Gaviotas, a 300 mts del mar con diseño bioclimático que minimiza impacto y prioriza confort natural</span>`,
   subTitle: "SOBRE NOSOTROS",
   imgUrl: "/images/About_us_1.webp",
   featureList: [

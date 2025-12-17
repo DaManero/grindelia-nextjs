@@ -21,6 +21,7 @@ export default function AboutSection4({ data }) {
                 dangerouslySetInnerHTML={{ __html: title }}
               />
             )}
+            {title && imgUrl && <Spacing lg="50" md="30" />}
             {imgUrl && (
               <img src={imgUrl} alt="Thumb" className="cs_about_img" />
             )}
