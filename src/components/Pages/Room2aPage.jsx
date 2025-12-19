@@ -174,6 +174,45 @@ export default function RoomDetailsPageV2() {
           .room2a-right .cs_list.cs_style_3 li span {
             color: #4b4b49;
           }
+          
+          /* Estilos para botón de reserva */
+          .cs_room_reserve_btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 30px;
+            background: #798a74;
+            color: white;
+            border: 2px solid #798a74;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 100%;
+            justify-content: center;
+          }
+          
+          .cs_room_reserve_btn:hover {
+            background: #6b7a66;
+            border-color: #6b7a66;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(121, 138, 116, 0.4);
+            color: white;
+          }
+          
+          .cs_room_reserve_btn svg {
+            transition: transform 0.3s ease;
+          }
+          
+          .cs_room_reserve_btn:hover svg {
+            transform: translate(3px, -3px);
+          }
+          
+          .cs_room_reserve_btn:active {
+            transform: translateY(0);
+          }
         `}</style>
         <div className="container">
           <div className="row cs_gap_y_40 align-items-start room2a-row">
@@ -261,6 +300,33 @@ export default function RoomDetailsPageV2() {
                     Reposeras para la playa
                   </li>
                 </ul>
+
+                {/* Botón Reservar Ahora */}
+                <div style={{ marginTop: "35px" }}>
+                  <a
+                    href="https://book.octorate.com/octobook/site/reservation/index.xhtml?siteKey=8e3ffa8acec77e1b7347357712d940a3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cs_room_reserve_btn"
+                  >
+                    <span>RESERVAR AHORA</span>
+                    <svg
+                      width={16}
+                      height={16}
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15 1L1 15M15 1H5M15 1V11"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

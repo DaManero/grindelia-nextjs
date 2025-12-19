@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React from "react";
 import Link from "next/link";
@@ -19,7 +19,8 @@ export default function RoomCardStyle7({
         variant ? variant : ""
       }`}
     >
-      <Link  href={href}
+      <Link
+        href={href}
         className="cs_card_thumb d-block overflow-hidden position-relative cs_primary_bg"
       >
         <img src={imgUrl} alt="Room" />

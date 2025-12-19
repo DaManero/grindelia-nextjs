@@ -351,6 +351,31 @@ const galleryData = [
     title: "Usos Múltiples",
     category: "Usos Múltiples",
   },
+  {
+    imgUrl: "/images/galleri-71.webp",
+    title: "Zona Infantil",
+    category: "Zona Infantil",
+  },
+  {
+    imgUrl: "/images/galleri-72.webp",
+    title: "Zona Infantil",
+    category: "Zona Infantil",
+  },
+  {
+    imgUrl: "/images/galleri-73.webp",
+    title: "Zona Infantil",
+    category: "Zona Infantil",
+  },
+  {
+    imgUrl: "/images/galleri-74.webp",
+    title: "Zona Infantil",
+    category: "Zona Infantil",
+  },
+  {
+    imgUrl: "/images/galleri-75.webp",
+    title: "Zona Infantil",
+    category: "Zona Infantil",
+  },
 ];
 
 export default function GalleryPage() {
