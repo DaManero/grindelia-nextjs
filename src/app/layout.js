@@ -3,6 +3,7 @@ import FloatingWhatsApp from "@/components/Global/FloatingWhatsApp";
 import MetaPixel from "@/components/MetaPixel";
 import HotelSchema from "@/components/Schema/HotelSchema";
 import LocalBusinessSchema from "@/components/Schema/LocalBusinessSchema";
+import WelcomePopup from "@/components/WelcomePopup";
 
 export const metadata = {
   title: "Grindelia Apart Hotel & Spa | Eco Resort Mar de las Pampas",
@@ -46,6 +47,7 @@ export default function RootLayout({ children }) {
       <body>
         <MetaPixel />
         {children}
+        <WelcomePopup />
         <FloatingWhatsApp
           whatsappNumber="5492255505626"
           whatsappMessage="Hola! Quisiera consultar disponibilidad y tarifas."

@@ -1,0 +1,342 @@
+// Overlay del popup
+.cs_popup_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 9998;
+  animation: fadeIn 0.3s ease-out;
+}
+
+// Container principal del popup
+.cs_welcome_popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  max-width: 600px;
+  width: 90%;
+  overflow: hidden;
+  animation: slideUp 0.4s ease-out;
+}
+
+// Imagen de fondo con overlay
+.cs_popup_image_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background-image: url('/images/home_parallax_2400.webp');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6));
+    z-index: 1;
+  }
+
+  @media (max-width: 576px) {
+    height: 130px;
+  }
+}
+
+// Botón de cerrar
+.cs_popup_close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 28px;
+  line-height: 1;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  z-index: 1;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: #333;
+    transform: rotate(90deg);
+  }
+}
+
+// Contenido del popup
+.cs_popup_content {
+  padding: 140px 24px 24px;
+  position: relative;
+  z-index: 2;
+
+  @media (max-width: 576px) {
+    padding: 120px 18px 18px;
+  }
+}
+
+// Header
+.cs_popup_header {
+  text-align: center;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+.cs_popup_title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 8px;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 576px) {
+    font-size: 17px;
+  }
+}
+
+.cs_popup_subtitle {
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0;
+  font-weight: 600;
+  font-style: italic;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 576px) {
+    font-size: 14px;
+  }
+}
+
+// Body
+.cs_popup_body {
+  margin-bottom: 18px;
+}
+
+// Promo section
+.cs_popup_promo {
+  text-align: center;
+  margin-bottom: 14px;
+  padding: 16px;
+  background: linear-gradient(135deg, #f8fdf9 0%, #f0f7f2 100%);
+  border-radius: 10px;
+  border: 2px solid #7c9885;
+}
+
+.cs_promo_discount {
+  font-size: 28px;
+  font-weight: 800;
+  color: #7c9885;
+  margin-bottom: 6px;
+  
+  @media (max-width: 576px) {
+    font-size: 24px;
+  }
+}
+
+.cs_promo_text {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333;
+  margin: 0;
+  
+  strong {
+    color: #7c9885;
+    font-weight: 700;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 13px;
+  }
+}
+
+// Details section
+.cs_popup_details {
+  margin-bottom: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cs_detail_item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.cs_detail_icon {
+  font-size: 22px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.cs_detail_text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+  margin: 0;
+  
+  strong {
+    color: #333;
+    font-weight: 700;
+  }
+}
+
+// Highlight box
+.cs_popup_highlight {
+  background: linear-gradient(135deg, #7c9885 0%, #6a8573 100%);
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(124, 152, 133, 0.2);
+}
+
+.cs_highlight_text {
+  font-size: 15px;
+  line-height: 1.4;
+  color: #ffffff;
+  margin: 0 0 6px;
+
+  strong {
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 14px;
+  }
+}
+
+.cs_highlight_subtext {
+  font-size: 15px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  font-style: italic;
+
+  @media (max-width: 576px) {
+    font-size: 12px;
+  }
+}
+
+// Footer con botones
+.cs_popup_footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cs_popup_btn_primary {
+  background: #7c9885;
+  color: #ffffff;
+  border: none;
+  padding: 14px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  &:hover {
+    background: #6a8573;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(124, 152, 133, 0.3);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.cs_popup_btn_secondary {
+  background: transparent;
+  color: #666;
+  border: 2px solid #e0e0e0;
+  padding: 12px 28px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: #f8f8f8;
+    border-color: #d0d0d0;
+    color: #333;
+  }
+}
+
+// Animaciones
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -45%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+// Scrollbar personalizado para el popup
+.cs_welcome_popup {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #7c9885;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #6a8573;
+  }
+}
