@@ -3,6 +3,9 @@
 import { useEffect, useState } from "react";
 import "./WelcomePopup.scss";
 
+// Configuración: cambiar a true cuando haya una nueva promoción
+const POPUP_ENABLED = false;
+
 export default function WelcomePopup() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -28,7 +31,8 @@ export default function WelcomePopup() {
     setIsOpen(false);
   };
 
-  if (!isOpen) return null;
+  // No mostrar el popup si está deshabilitado
+  if (!POPUP_ENABLED || !isOpen) return null;
 
   return (
     <>
