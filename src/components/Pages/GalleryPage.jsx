@@ -376,6 +376,26 @@ const galleryData = [
     title: "Zona Infantil",
     category: "Zona Infantil",
   },
+  {
+    imgUrl: "/images/galleri-76.webp",
+    title: "Quincho y Padel",
+    category: "Quincho y Padel",
+  },
+  {
+    imgUrl: "/images/galleri-77.webp",
+    title: "Quincho y Padel",
+    category: "Quincho y Padel",
+  },
+  {
+    imgUrl: "/images/galleri-78.webp",
+    title: "Quincho y Padel",
+    category: "Quincho y Padel",
+  },
+  {
+    imgUrl: "/images/galleri-79.webp",
+    title: "Quincho y Padel",
+    category: "Quincho y Padel",
+  },
 ];
 
 export default function GalleryPage() {
@@ -390,7 +410,7 @@ export default function GalleryPage() {
     "Habitaciones",
     "Pileta",
     "Gimnasio",
-    // "Espacios Verdes",
+    "Quincho y Padel",
     "Usos Múltiples",
     "Zona Infantil",
     "Spa",
