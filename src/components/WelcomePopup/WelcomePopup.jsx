@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import "./WelcomePopup.scss";
 
 // Configuración: cambiar a true cuando haya una nueva promoción
-const POPUP_ENABLED = false;
+const POPUP_ENABLED = true;
 
 export default function WelcomePopup() {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,22 +48,18 @@ export default function WelcomePopup() {
 
         <div className="cs_popup_image_bg">
           <div className="cs_popup_header">
-            <h2 className="cs_popup_title">
-              GRINDELIA · ECO APART | HOTEL & SPA 🌿
-            </h2>
-            <p className="cs_popup_subtitle">
-              Un beneficio para quienes saben anticiparse.
-            </p>
+            <h2 className="cs_popup_title">ENERO – FEBRERO | TEMPORADA ALTA</h2>
+            <p className="cs_popup_subtitle">Reservando tu semana ahora</p>
           </div>
         </div>
         <div className="cs_popup_content">
           <div className="cs_popup_body">
             <div className="cs_popup_promo">
-              <div className="cs_promo_discount">✨ 15% de descuento</div>
+              <div className="cs_promo_discount">✨ 15% OFF</div>
               <p className="cs_promo_text">
-                en reservas confirmadas
+                Solo 4 unidades disponibles
                 <br />
-                realizadas hasta el <strong>31 de diciembre</strong>
+                <strong>¡Reservá ya tu semana!</strong>
               </p>
             </div>
 
@@ -71,26 +67,27 @@ export default function WelcomePopup() {
               <div className="cs_detail_item">
                 <span className="cs_detail_icon">📅</span>
                 <p className="cs_detail_text">
-                  Válido para cualquier semana que se reserve,
-                  <strong> incluyendo febrero</strong>
+                  Desde el <strong>Sábado 17 de Enero</strong>
+                  <br />
+                  hasta el <strong>Sábado 16 de Febrero</strong>
                 </p>
               </div>
               <div className="cs_detail_item">
                 <span className="cs_detail_icon">⚠️</span>
                 <p className="cs_detail_text">
-                  <strong>Cupos limitados</strong>
+                  <strong>Solo 4 unidades disponibles</strong>
                   <br />
-                  Aplicable solo a reservas confirmadas.
+                  Temporada alta · Cupos limitados
                 </p>
               </div>
             </div>
 
             <div className="cs_popup_highlight">
               <p className="cs_highlight_text">
-                <strong>Reservar antes es elegir mejor.</strong>
+                <strong>Aprovechá la temporada alta con descuento</strong>
               </p>
               <p className="cs_highlight_subtext">
-                No lo pienses mucho… el descanso también se agenda 🌿✨
+                Las mejores semanas del verano te están esperando 🌿✨
               </p>
             </div>
           </div>
