@@ -48,18 +48,22 @@ export default function WelcomePopup() {
 
         <div className="cs_popup_image_bg">
           <div className="cs_popup_header">
-            <h2 className="cs_popup_title">ENERO – FEBRERO | TEMPORADA ALTA</h2>
-            <p className="cs_popup_subtitle">Reservando tu semana ahora</p>
+            <h2 className="cs_popup_title">PROMO FEBRERO | 4x3</h2>
+            <p className="cs_popup_subtitle">
+              ¡Una noche de regalo + regalo exclusivo!
+            </p>
           </div>
         </div>
         <div className="cs_popup_content">
           <div className="cs_popup_body">
             <div className="cs_popup_promo">
-              <div className="cs_promo_discount">✨ 15% OFF</div>
+              <div className="cs_promo_discount">
+                🎁 4 NOCHES AL PRECIO DE 3
+              </div>
               <p className="cs_promo_text">
-                Solo 4 unidades disponibles
+                Pagás 3 noches y recibís
                 <br />
-                <strong>¡Reservá ya tu semana!</strong>
+                <strong>¡1 noche de regalo + regalo exclusivo!</strong>
               </p>
             </div>
 
@@ -67,27 +71,29 @@ export default function WelcomePopup() {
               <div className="cs_detail_item">
                 <span className="cs_detail_icon">📅</span>
                 <p className="cs_detail_text">
-                  Desde el <strong>Sábado 17 de Enero</strong>
+                  <strong>Check-in: 14 de Febrero</strong>
                   <br />
-                  hasta el <strong>Sábado 16 de Febrero</strong>
+                  <strong>Check-out: 18 de Febrero</strong>
+                  <br />
+                  <small>(4 noches consecutivas)</small>
                 </p>
               </div>
               <div className="cs_detail_item">
-                <span className="cs_detail_icon">⚠️</span>
+                <span className="cs_detail_icon">🎁</span>
                 <p className="cs_detail_text">
-                  <strong>Solo 4 unidades disponibles</strong>
+                  <strong>Incluye regalo exclusivo</strong>
                   <br />
-                  Temporada alta · Cupos limitados
+                  Beneficio especial para esta promo
                 </p>
               </div>
             </div>
 
             <div className="cs_popup_highlight">
               <p className="cs_highlight_text">
-                <strong>Aprovechá la temporada alta con descuento</strong>
+                <strong>Oferta válida del 14 al 18 de febrero</strong>
               </p>
               <p className="cs_highlight_subtext">
-                Las mejores semanas del verano te están esperando 🌿✨
+                Aprovechá esta promoción especial 🌿✨
               </p>
             </div>
           </div>
