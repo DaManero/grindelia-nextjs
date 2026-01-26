@@ -11,7 +11,7 @@ const roomDetailsData = {
     "Unidades de 2 ambientes con terraza privada tipo deck y parrilla (adatpadas para personas con discapacidad), ideales para disfrutar al aire libre. El living-comedor se integra con la terraza, aportando luminosidad y vistas despejadas. Cocina completa y equipada con electrodomésticos modernos para mayor comodidad y autonomía. Dormitorio en suite con jacuzzi y vestidor; además dos dormitorios amplios con placares empotrados y ropa de cama premium para un descanso reparador. Baño completo con hidromasaje y amenities de alta calidad. Superficie cubierta de 60 m² y descubierta de 18 m², diseñada para confort y funcionalidad. Incluye servicio Grindelia: desayuno diario, limpieza y acceso a piscina y spa; atención al huésped disponible para resolver cualquier necesidad durante tu estadía.",
 
   breakfastTitle: "Desayuno",
-  breakfastInfo: `Incluye desayuno únicamente con envío a los departamentos. Horario: 08:00 a 11:00 hs.`,
+  breakfastInfo: `Incluye desayuno únicamente con envío a los departamentos. Horario: 07:30 a 10:30 hs.`,
 
   cleaningTitle: "Limpieza",
   cleaningInfo: `Horario: de 9:00 a 14:00 hs. Incluye orden del apart, recambio de sábanas y toallas según política vigente.

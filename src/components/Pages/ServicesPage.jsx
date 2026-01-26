@@ -50,7 +50,7 @@ const featureData = [
 const faqData = [
   {
     title: "¿Cuáles son los horarios de check-in y check-out?",
-    content: "El check-in es a las 15:00 hs y el check-out es a las 10:00 hs.",
+    content: "El check-in es a las 15:30 hs y el check-out es a las 11:30 hs.",
   },
   {
     title: "¿Hay estacionamiento disponible y tiene costo?",

@@ -18,7 +18,7 @@ Incluye servicio Grindelia: desayuno diario, limpieza y acceso a piscina y spa.
 Atención al huésped disponible para resolver cualquier necesidad durante tu estadía.`,
 
   breakfastTitle: "Desayuno",
-  breakfastInfo: `Incluye desayuno únicamente con envío a los departamentos. Horario: 08:00 a 11:00 hs.`,
+  breakfastInfo: `Incluye desayuno únicamente con envío a los departamentos. Horario: 07:30 a 10.30 hs.`,
 
   cleaningTitle: "Limpieza",
   cleaningInfo: `Horario: de 9:00 a 14:00 hs. Incluye orden del apart, recambio de sábanas y toallas según política vigente.
@@ -45,7 +45,7 @@ El servicio de limpieza diario no incluye lavado de vajilla. Cada unidad cuenta 
     },
     { iconUrl: "/images/icons/facility_icon_8.svg", title: "Televisión" },
     { iconUrl: "/images/icons/facility_icon_9.svg", title: "Wi-Fi" },
-    { iconUrl: "/images/icons/facility_icon_10.svg", title: "Bañera" },
+
     {
       iconUrl: "/images/icons/facility_icon_12.svg",
       title: "Servicio a la habitación",
