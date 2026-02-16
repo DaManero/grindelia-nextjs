@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import "./WelcomePopup.scss";
 
 // Configuración: cambiar a true cuando haya una nueva promoción
-const POPUP_ENABLED = true;
+const POPUP_ENABLED = false;
 
 export default function WelcomePopup() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +26,7 @@ export default function WelcomePopup() {
     window.open(
       "https://book.octorate.com/octobook/site/reservation/index.xhtml?siteKey=8e3ffa8acec77e1b7347357712d940a3",
       "_blank",
-      "noopener,noreferrer"
+      "noopener,noreferrer",
     );
     setIsOpen(false);
   };
