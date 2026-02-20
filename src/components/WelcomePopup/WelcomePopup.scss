@@ -195,6 +195,20 @@
   border-radius: 8px;
 }
 
+// Destaque especial para los beneficios principales
+.cs_detail_item--highlight {
+  background: var(--accent);
+  box-shadow: 0 2px 8px rgba(197, 164, 109, 0.10);
+  border: 1.5px solid var(--accent);
+  color: #fff !important;
+  font-weight: 700;
+}
+.cs_detail_item--highlight .cs_detail_icon,
+.cs_detail_item--highlight .cs_detail_text,
+.cs_detail_item--highlight .cs_detail_text strong {
+  color: #fff !important;
+}
+
 .cs_detail_icon {
   font-size: 22px;
   line-height: 1;
@@ -258,9 +272,9 @@
 }
 
 .cs_popup_btn_primary {
-  background: #7c9885;
+  background: var(--accent);
   color: #ffffff;
-  border: none;
+  border: 1px solid var(--accent);
   padding: 14px 28px;
   font-size: 14px;
   font-weight: 600;
@@ -271,9 +285,10 @@
   letter-spacing: 0.5px;
 
   &:hover {
-    background: #6a8573;
+    background: var(--primary);
+    border-color: var(--primary);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(124, 152, 133, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   }
 
   &:active {

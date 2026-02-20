@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import "./WelcomePopup.scss";
 
 // Configuración: cambiar a true cuando haya una nueva promoción
-const POPUP_ENABLED = false;
+const POPUP_ENABLED = true;
 
 export default function WelcomePopup() {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,52 +48,54 @@ export default function WelcomePopup() {
 
         <div className="cs_popup_image_bg">
           <div className="cs_popup_header">
-            <h2 className="cs_popup_title">PROMO FEBRERO | 4x3</h2>
-            <p className="cs_popup_subtitle">
-              ¡Una noche de regalo + regalo exclusivo!
-            </p>
+            <h2 className="cs_popup_title">COMENZÁ EL OTOÑO EN GRINDELIA.</h2>
+            <p className="cs_popup_subtitle">21 | 22 | 23 | 24 de marzo</p>
           </div>
         </div>
         <div className="cs_popup_content">
           <div className="cs_popup_body">
             <div className="cs_popup_promo">
-              <div className="cs_promo_discount">
-                🎁 4 NOCHES AL PRECIO DE 3
-              </div>
+              <div className="cs_promo_discount">FIN DE SEMANA LARGO XXL</div>
               <p className="cs_promo_text">
-                Pagás 3 noches y recibís
+                En Grindelia sabemos que un fin de semana largo no se
+                desaprovecha.
                 <br />
-                <strong>¡1 noche de regalo + regalo exclusivo!</strong>
+                <strong>
+                  Por eso armamos una propuesta especial pensada para que
+                  realmente valga la pena quedarse los cuatro días.
+                </strong>
               </p>
             </div>
 
             <div className="cs_popup_details">
-              <div className="cs_detail_item">
-                <span className="cs_detail_icon">📅</span>
+              <div className="cs_detail_item cs_detail_item--highlight">
+                <span className="cs_detail_icon">✔</span>
                 <p className="cs_detail_text">
-                  <strong>Check-in: 14 de Febrero</strong>
-                  <br />
-                  <strong>Check-out: 18 de Febrero</strong>
-                  <br />
-                  <small>(4 noches consecutivas)</small>
+                  <strong>
+                    Descuento especial por estadía completa de 4 noches
+                  </strong>
                 </p>
               </div>
-              <div className="cs_detail_item">
-                <span className="cs_detail_icon">🎁</span>
+              <div className="cs_detail_item cs_detail_item--highlight">
+                <span className="cs_detail_icon">✔</span>
                 <p className="cs_detail_text">
-                  <strong>Incluye regalo exclusivo</strong>
-                  <br />
-                  Beneficio especial para esta promo
+                  <strong>Late check-out incluido</strong>
                 </p>
               </div>
             </div>
 
             <div className="cs_popup_highlight">
               <p className="cs_highlight_text">
-                <strong>Oferta válida del 14 al 18 de febrero</strong>
+                <strong>Beneficios exclusivos para esta fecha</strong>
               </p>
               <p className="cs_highlight_subtext">
-                Aprovechá esta promoción especial 🌿✨
+                Aprovechá este finde largo para desconectar 🌿✨
+              </p>
+              <p className="cs_highlight_subtext">
+                Más tiempo para disfrutar el spa, el entorno y el descanso
+              </p>
+              <p className="cs_highlight_subtext">
+                Evitás el horario pico y el tráfico de regreso
               </p>
             </div>
           </div>
