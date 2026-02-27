@@ -240,7 +240,7 @@ const galleryData = [
   { imgUrl: "/images/Gallery_1.webp", title: "Pileta" },
   { imgUrl: "/images/Gallery_2.webp", title: "Niños" },
   { imgUrl: "/images/Gallery_3.webp", title: "Modo Relax" },
-  { imgUrl: "/images/Gallery_4.webp", title: "Modo Conford" },
+  { imgUrl: "/images/Gallery_4.webp", title: "Modo Confort" },
 ];
 
 const blogData = [
