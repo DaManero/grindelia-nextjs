@@ -46,67 +46,62 @@ export default function WelcomePopup() {
           ×
         </button>
 
-        <div className="cs_popup_image_bg">
-          <div className="cs_popup_header">
-            <h2 className="cs_popup_title">COMENZÁ EL OTOÑO EN GRINDELIA.</h2>
-            <p className="cs_popup_subtitle">21 | 22 | 23 | 24 de marzo</p>
+        {/* Columna izquierda: imagen */}
+        <div className="cs_popup_col_image">
+          <div className="cs_popup_image_label">
+            <span className="cs_popup_badge">FINDE XXL</span>
+            <p className="cs_popup_dates">21 · 22 · 23 · 24</p>
+            <p className="cs_popup_month">MARZO 2026</p>
           </div>
         </div>
-        <div className="cs_popup_content">
-          <div className="cs_popup_body">
-            <div className="cs_popup_promo">
-              <div className="cs_promo_discount">FIN DE SEMANA LARGO XXL</div>
-              <p className="cs_promo_text">
-                En Grindelia sabemos que un fin de semana largo no se
-                desaprovecha.
-                <br />
-                <strong>
-                  Por eso armamos una propuesta especial pensada para que
-                  realmente valga la pena quedarse los cuatro días.
-                </strong>
-              </p>
+
+        {/* Columna derecha: contenido */}
+        <div className="cs_popup_col_content">
+          <div className="cs_popup_col_inner">
+            <div className="cs_popup_top">
+              <h2 className="cs_popup_title">Grindelia</h2>
+              <div className="cs_promo_discount">15% OFF</div>
+              <p className="cs_promo_label">sobre la tarifa publicada</p>
             </div>
 
-            <div className="cs_popup_details">
-              <div className="cs_detail_item cs_detail_item--highlight">
-                <span className="cs_detail_icon">✔</span>
-                <p className="cs_detail_text">
-                  <strong>
-                    Descuento especial por estadía completa de 4 noches
-                  </strong>
-                </p>
-              </div>
-              <div className="cs_detail_item cs_detail_item--highlight">
-                <span className="cs_detail_icon">✔</span>
-                <p className="cs_detail_text">
-                  <strong>Late check-out incluido</strong>
-                </p>
-              </div>
-            </div>
+            <ul className="cs_popup_benefits">
+              <li>
+                <span className="cs_benefit_icon">✨</span>
+                <span>
+                  <strong>3 noches</strong> (21 al 24 de marzo)
+                </span>
+              </li>
+              <li>
+                <span className="cs_benefit_icon">✨</span>
+                <span>
+                  <strong>Late check-out</strong> incluido
+                </span>
+              </li>
+              <li>
+                <span className="cs_benefit_icon">✨</span>
+                <span>
+                  <strong>Regalo exclusivo</strong>
+                </span>
+              </li>
+            </ul>
 
-            <div className="cs_popup_highlight">
-              <p className="cs_highlight_text">
-                <strong>Beneficios exclusivos para esta fecha</strong>
-              </p>
-              <p className="cs_highlight_subtext">
-                Aprovechá este finde largo para desconectar 🌿✨
-              </p>
-              <p className="cs_highlight_subtext">
-                Más tiempo para disfrutar el spa, el entorno y el descanso
-              </p>
-              <p className="cs_highlight_subtext">
-                Evitás el horario pico y el tráfico de regreso
-              </p>
-            </div>
-          </div>
+            <p className="cs_popup_desc">
+              Departamentos de 2 y 3 ambientes, piscina climatizada y espacios
+              de relax en la costa.
+            </p>
 
-          <div className="cs_popup_footer">
-            <button className="cs_popup_btn_primary" onClick={handleBooking}>
-              RESERVAR AHORA
-            </button>
-            <button className="cs_popup_btn_secondary" onClick={handleClose}>
-              Explorar el sitio
-            </button>
+            <p className="cs_popup_stock">
+              * Hasta agotar stock — <strong>5 habitaciones disponibles</strong>
+            </p>
+
+            <div className="cs_popup_footer">
+              <button className="cs_popup_btn_primary" onClick={handleBooking}>
+                RESERVAR AHORA
+              </button>
+              <button className="cs_popup_btn_secondary" onClick={handleClose}>
+                Explorar el sitio
+              </button>
+            </div>
           </div>
         </div>
       </div>

@@ -11,7 +11,7 @@
   animation: fadeIn 0.3s ease-out;
 }
 
-// Container principal del popup
+// Container principal del popup — layout dos columnas
 .cs_welcome_popup {
   position: fixed;
   top: 50%;
@@ -19,221 +19,246 @@
   transform: translate(-50%, -50%);
   background: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.35);
   z-index: 9999;
-  max-width: 600px;
-  width: 90%;
+  max-width: 680px;
+  width: 92%;
   overflow: hidden;
   animation: slideUp 0.4s ease-out;
+  display: flex;
+  flex-direction: row;
+  min-height: 420px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    min-height: unset;
+    max-width: 96vw;
+  }
 }
 
-// Imagen de fondo con overlay
-.cs_popup_image_bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 150px;
+// Columna izquierda: imagen
+.cs_popup_col_image {
+  width: 42%;
+  flex-shrink: 0;
   background-image: url('/images/home_parallax_2400.webp');
   background-size: cover;
   background-position: center;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  padding-bottom: 0;
+
   &::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6));
-    z-index: 1;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.28) 60%, rgba(0,0,0,0.1) 100%);
   }
 
-  @media (max-width: 576px) {
-    height: 130px;
+  @media (max-width: 600px) {
+    width: 100%;
+    height: 160px;
+    padding-bottom: 16px;
+  }
+}
+
+.cs_popup_image_label {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.cs_popup_badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.cs_popup_dates {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.cs_popup_month {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 3px;
+  margin: 4px 0 0;
+  text-transform: uppercase;
+}
+
+// Columna derecha: contenido
+.cs_popup_col_content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: 92vh;
+}
+
+.cs_popup_col_inner {
+  padding: 28px 24px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 100%;
+
+  @media (max-width: 600px) {
+    padding: 20px 18px 18px;
+    gap: 12px;
   }
 }
 
 // Botón de cerrar
 .cs_popup_close {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  background: rgba(0, 0, 0, 0.05);
+  top: 12px;
+  right: 12px;
+  background: rgba(255,255,255,0.15);
   border: none;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  font-size: 28px;
+  font-size: 26px;
   line-height: 1;
-  color: #666;
+  color: #fff;
   cursor: pointer;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
-  z-index: 1;
+  z-index: 10;
+
+  @media (min-width: 601px) {
+    background: rgba(0,0,0,0.06);
+    color: #666;
+    top: 12px;
+    right: 12px;
+    position: absolute;
+  }
 
   &:hover {
-    background: rgba(0, 0, 0, 0.1);
-    color: #333;
+    background: rgba(0, 0, 0, 0.12);
+    color: #222;
     transform: rotate(90deg);
   }
 }
 
-// Contenido del popup
-.cs_popup_content {
-  padding: 140px 24px 24px;
-  position: relative;
-  z-index: 2;
-
-  @media (max-width: 576px) {
-    padding: 120px 18px 18px;
-  }
-}
-
-// Header
-.cs_popup_header {
+// Bloque superior: nombre + descuento
+.cs_popup_top {
   text-align: center;
-  margin-bottom: 0;
-  position: relative;
-  z-index: 2;
-  padding: 0 20px;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 12px;
 }
 
 .cs_popup_title {
-  font-size: 20px;
-  font-weight: 700;
-  color: #ffffff;
-  margin: 0 0 8px;
-  line-height: 1.3;
-  letter-spacing: 0.5px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-
-  @media (max-width: 576px) {
-    font-size: 17px;
-  }
-}
-
-.cs_popup_subtitle {
-  font-size: 16px;
-  color: #ffffff;
-  margin: 0;
+  font-size: 15px;
   font-weight: 600;
-  font-style: italic;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-
-  @media (max-width: 576px) {
-    font-size: 14px;
-  }
-}
-
-// Body
-.cs_popup_body {
-  margin-bottom: 18px;
-}
-
-// Promo section
-.cs_popup_promo {
-  text-align: center;
-  margin-bottom: 14px;
-  padding: 16px;
-  background: linear-gradient(135deg, #f8fdf9 0%, #f0f7f2 100%);
-  border-radius: 10px;
-  border: 2px solid #7c9885;
+  color: #999;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0 0 6px;
 }
 
 .cs_promo_discount {
-  font-size: 28px;
-  font-weight: 800;
+  font-size: 48px;
+  font-weight: 900;
   color: #7c9885;
-  margin-bottom: 6px;
-  
-  @media (max-width: 576px) {
-    font-size: 24px;
-  }
-}
-
-.cs_promo_text {
-  font-size: 15px;
-  line-height: 1.5;
-  color: #333;
-  margin: 0;
-  
-  strong {
-    color: #7c9885;
-    font-weight: 700;
-  }
-
-  @media (max-width: 576px) {
-    font-size: 13px;
-  }
-}
-
-// Details section
-.cs_popup_details {
-  margin-bottom: 14px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-
-  @media (max-width: 576px) {
-    grid-template-columns: 1fr;
-  }
-}
-
-.cs_detail_item {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  padding: 10px;
-  background: #f9f9f9;
-  border-radius: 8px;
-}
-
-// Destaque especial para los beneficios principales
-.cs_detail_item--highlight {
-  background: var(--accent);
-  box-shadow: 0 2px 8px rgba(197, 164, 109, 0.10);
-  border: 1.5px solid var(--accent);
-  color: #fff !important;
-  font-weight: 700;
-}
-.cs_detail_item--highlight .cs_detail_icon,
-.cs_detail_item--highlight .cs_detail_text,
-.cs_detail_item--highlight .cs_detail_text strong {
-  color: #fff !important;
-}
-
-.cs_detail_icon {
-  font-size: 22px;
   line-height: 1;
+  margin: 0;
+  letter-spacing: -1px;
+
+  @media (max-width: 600px) {
+    font-size: 38px;
+  }
+}
+
+.cs_promo_label {
+  font-size: 13px;
+  color: #888;
+  margin: 4px 0 0;
+  font-style: italic;
+}
+
+// Lista de beneficios
+.cs_popup_benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #444;
+    background: #f7faf8;
+    border-radius: 8px;
+    padding: 9px 12px;
+    border-left: 3px solid #7c9885;
+
+    strong {
+      color: #333;
+    }
+  }
+}
+
+.cs_benefit_icon {
+  font-size: 16px;
   flex-shrink: 0;
 }
 
-.cs_detail_text {
-  font-size: 14px;
-  line-height: 1.5;
-  color: #555;
+// Descripción
+.cs_popup_desc {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.6;
   margin: 0;
-  
+  text-align: center;
+}
+
+// Stock
+.cs_popup_stock {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
+  text-align: center;
+  font-style: italic;
+
   strong {
-    color: #333;
-    font-weight: 700;
+    color: #e07a5f;
   }
 }
 
-// Highlight box
+// Secciones obsoletas mantenidas por compatibilidad (vacías)
+.cs_popup_content,
+.cs_popup_body,
+.cs_popup_promo,
+.cs_popup_details,
+.cs_detail_item,
+.cs_detail_item--highlight,
+.cs_detail_icon,
+.cs_detail_text,
 .cs_popup_highlight {
-  background: linear-gradient(135deg, #7c9885 0%, #6a8573 100%);
-  padding: 12px 16px;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(124, 152, 133, 0.2);
+  // estilos legacy — ya no se usan en el nuevo layout
 }
 
 .cs_highlight_text {
@@ -268,7 +293,8 @@
 .cs_popup_footer {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
+  margin-top: auto;
 }
 
 .cs_popup_btn_primary {
