@@ -49,9 +49,9 @@ export default function WelcomePopup() {
         {/* Columna izquierda: imagen */}
         <div className="cs_popup_col_image">
           <div className="cs_popup_image_label">
-            <span className="cs_popup_badge">FINDE XXL</span>
-            <p className="cs_popup_dates">21 · 22 · 23 · 24</p>
-            <p className="cs_popup_month">MARZO 2026</p>
+            <span className="cs_popup_badge">SEMANA SANTA</span>
+            <p className="cs_popup_dates">1 · 2 · 3 · 4 · 5</p>
+            <p className="cs_popup_month">ABRIL 2026</p>
           </div>
         </div>
 
@@ -60,27 +60,27 @@ export default function WelcomePopup() {
           <div className="cs_popup_col_inner">
             <div className="cs_popup_top">
               <h2 className="cs_popup_title">Grindelia</h2>
-              <div className="cs_promo_discount">15% OFF</div>
-              <p className="cs_promo_label">sobre la tarifa publicada</p>
+              <div className="cs_promo_discount">PROMO ESPECIAL</div>
+              <p className="cs_promo_label">Semana Santa en Grindelia</p>
             </div>
 
             <ul className="cs_popup_benefits">
               <li>
-                <span className="cs_benefit_icon">✨</span>
+                <span className="cs_benefit_icon">📅</span>
                 <span>
-                  <strong>3 noches</strong> (21 al 24 de marzo)
+                  <strong>Del 1 al 5 de abril</strong>
                 </span>
               </li>
               <li>
-                <span className="cs_benefit_icon">✨</span>
+                <span className="cs_benefit_icon">✔</span>
                 <span>
-                  <strong>Late check-out</strong> incluido
+                  <strong>4 noches</strong> + late check-out el 5 por la tarde
                 </span>
               </li>
               <li>
-                <span className="cs_benefit_icon">✨</span>
+                <span className="cs_benefit_icon">🎁</span>
                 <span>
-                  <strong>Regalo exclusivo</strong>
+                  <strong>Regalo exclusivo</strong> de bienvenida
                 </span>
               </li>
             </ul>
@@ -88,10 +88,6 @@ export default function WelcomePopup() {
             <p className="cs_popup_desc">
               Departamentos de 2 y 3 ambientes, piscina climatizada y espacios
               de relax en la costa.
-            </p>
-
-            <p className="cs_popup_stock">
-              * Hasta agotar stock — <strong>5 habitaciones disponibles</strong>
             </p>
 
             <div className="cs_popup_footer">
