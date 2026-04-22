@@ -165,10 +165,6 @@ export default function HeroStyle1({ title, subTitle, bgImgUrl }) {
                 Ver Habitaciones
               </a>
             </div>
-
-            <p className="cs_hero_urgency_text">
-              ✨ Disponibilidad limitada para el verano 2025
-            </p>
           </div>
         </div>
       </div>

@@ -137,22 +137,12 @@ const galleryData = [
     category: "Pileta",
   },
   {
-    imgUrl: "/images/galleri-27.webp",
-    title: "Piscina",
-    category: "Pileta",
-  },
-  {
     imgUrl: "/images/galleri-28.webp",
     title: "Piscina",
     category: "Pileta",
   },
   {
     imgUrl: "/images/galleri-29.webp",
-    title: "Piscina",
-    category: "Pileta",
-  },
-  {
-    imgUrl: "/images/galleri-30.webp",
     title: "Piscina",
     category: "Pileta",
   },
