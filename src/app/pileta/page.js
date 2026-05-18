@@ -3,9 +3,10 @@ import Layout7 from "@/components/Layout/Layout7";
 import BreadcrumbSchema from "@/components/Schema/BreadcrumbSchema";
 
 export const metadata = {
-  title: "Pileta Climatizada, Quincho y Paddle | Grindelia Mar de las Pampas",
+  title:
+    "Pileta Climatizada, Quincho y Paddle | Grindelia Las Gaviotas | Partido de Villa Gesell",
   description:
-    "Pileta climatizada todo el año, quincho con capacidad para 30 personas y cancha de paddle en Grindelia Apart Hotel. Instalaciones premium para familias en Las Gaviotas, Mar de las Pampas.",
+    "Pileta climatizada todo el año, quincho con capacidad para 30 personas y cancha de paddle en Grindelia Apart Hotel. Instalaciones premium para familias en Las Gaviotas, Partido de Villa Gesell.",
   alternates: {
     canonical: "https://grindelia.com.ar/pileta",
   },

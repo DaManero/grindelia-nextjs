@@ -11,7 +11,7 @@ export default function LocalBusinessSchema() {
     address: {
       "@type": "PostalAddress",
       streetAddress: "Las Gaviotas",
-      addressLocality: "Mar de las Pampas",
+      addressLocality: "Las Gaviotas",
       addressRegion: "Buenos Aires",
       addressCountry: "AR",
     },

@@ -7,25 +7,21 @@
 Se crearon componentes reutilizables de Schema.org en `/src/components/Schema/`:
 
 - **HotelSchema.jsx**: Datos estructurados del hotel
-
   - Nombre, descripción, ubicación
   - Coordenadas GPS
   - Amenities (pileta, spa, gym, paddle, quincho, etc.)
   - Contacto y redes sociales
 
 - **LocalBusinessSchema.jsx**: Información de negocio local
-
   - Horarios de atención
   - Dirección completa
   - Geolocalización
 
 - **BreadcrumbSchema.jsx**: Breadcrumbs para navegación
-
   - Implementado en página de Pileta como ejemplo
   - Reutilizable para todas las páginas
 
 - **FAQSchema.jsx**: Para página de preguntas frecuentes
-
   - Listo para implementar cuando se agregue contenido FAQ
 
 - **ProductSchema.jsx**: Para habitaciones
@@ -61,7 +57,7 @@ Se mejoraron titles y descriptions de todas las páginas incluyendo:
 
 ✅ **Palabras clave estratégicas**:
 
-- "Mar de las Pampas"
+- "Las Gaviotas"
 - "Las Gaviotas"
 - "Apart Hotel"
 - "Eco Resort"
@@ -81,8 +77,8 @@ title: "Pileta Climatizada | Grindelia Apart Hotel & Spa";
 description: "Disfrutá de nuestra pileta climatizada todo el año.";
 
 // DESPUÉS:
-title: "Pileta Climatizada, Quincho y Paddle | Grindelia Mar de las Pampas";
-description: "Pileta climatizada todo el año, quincho con capacidad para 30 personas y cancha de paddle en Grindelia Apart Hotel. Instalaciones premium para familias en Las Gaviotas, Mar de las Pampas.";
+title: "Pileta Climatizada, Quincho y Paddle | Grindelia Las Gaviotas";
+description: "Pileta climatizada todo el año, quincho con capacidad para 30 personas y cancha de paddle en Grindelia Apart Hotel. Instalaciones premium para familias en Las Gaviotas, Las Gaviotas.";
 ```
 
 ---
@@ -120,7 +116,7 @@ Se actualizó el componente `AboutSection8` para aceptar alt texts personalizado
 
 ```javascript
 altText1 =
-  "Pileta climatizada infinity pool Grindelia Apart Hotel Mar de las Pampas";
+  "Pileta climatizada infinity pool Grindelia Apart Hotel Las Gaviotas";
 altText2 = "Vista panorámica pileta y quincho en Grindelia Las Gaviotas";
 altText3 = "Área de pileta y reposeras Grindelia Apart Hotel";
 ```
@@ -190,13 +186,11 @@ compress: true
 ### **Prioridad Alta** 🔥
 
 1. **Implementar ProductSchema en habitaciones**
-
    - Agregar en `/room/2a/page.js`
    - Agregar en `/room/3a/page.js`
    - Incluir precios y disponibilidad
 
 2. **Crear contenido FAQ con FAQSchema**
-
    - Agregar preguntas frecuentes sobre:
      - Horarios de check-in/out
      - Políticas de reserva
@@ -213,13 +207,11 @@ compress: true
 ### **Prioridad Media** ⚡
 
 4. **Google Business Profile**
-
    - Verificar/optimizar ficha de Google My Business
    - Agregar fotos profesionales
    - Solicitar reviews de huéspedes
 
 5. **Implementar Reviews Schema**
-
    - Agregar testimonios con schema
    - Rating agregado del hotel
 
@@ -231,8 +223,7 @@ compress: true
 ### **Prioridad Baja** 📋
 
 7. **Blog SEO**
-
-   - "Qué hacer en Mar de las Pampas"
+   - "Qué hacer en Las Gaviotas"
    - "Beneficios del turismo sustentable"
    - "Guía de playas cercanas"
 
@@ -248,23 +239,19 @@ compress: true
 ### **Herramientas recomendadas**:
 
 1. **Google Search Console**
-
    - Enviar sitemap actualizado
    - Verificar indexación de URLs
    - Monitorear Core Web Vitals
 
 2. **Schema.org Validator**
-
    - https://validator.schema.org/
    - Validar JSON-LD implementado
 
 3. **Google Rich Results Test**
-
    - https://search.google.com/test/rich-results
    - Verificar que los schemas se detectan
 
 4. **PageSpeed Insights**
-
    - https://pagespeed.web.dev/
    - Verificar mejoras en rendimiento
 
@@ -296,25 +283,25 @@ npm run lint
 
 ### **Primary Keywords**:
 
-1. apart hotel mar de las pampas
-2. hotel las gaviotas mar de las pampas
+1. apart hotel Las Gaviotas
+2. hotel las gaviotas Las Gaviotas
 3. eco resort sustentable argentina
 4. apart hotel pileta climatizada
-5. spa wellness mar de las pampas
+5. spa wellness Las Gaviotas
 
 ### **Secondary Keywords**:
 
 1. alojamiento sustentable costa atlántica
-2. hotel boutique mar de las pampas
+2. hotel boutique Las Gaviotas
 3. apart hotel gimnasio spa
-4. alojamiento familiar mar de las pampas
+4. alojamiento familiar Las Gaviotas
 5. hotel cancha paddle playa
 
 ### **Long-tail Keywords**:
 
-1. apart hotel con pileta climatizada mar de las pampas
+1. apart hotel con pileta climatizada Las Gaviotas
 2. eco hotel diseño bioclimático argentina
-3. spa masajes sauna mar de las pampas
+3. spa masajes sauna Las Gaviotas
 4. alojamiento sustentable cerca de la playa
 5. apart hotel quincho eventos las gaviotas
 

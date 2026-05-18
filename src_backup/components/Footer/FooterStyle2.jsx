@@ -21,7 +21,7 @@ const contactInfoData = {
 };
 const contactInfoData2 = {
   address:
-    "Calle 28 385 (Esq. Copacabana), Mar de las Pampas, Buenos Aires, Argentina",
+    "Calle 28 385 (Esq. Copacabana), Las Gaviotas, Partido de Villa Gesell, Buenos Aires, Argentina",
 };
 
 export default function FooterStyle2() {

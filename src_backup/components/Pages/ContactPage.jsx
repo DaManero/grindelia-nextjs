@@ -10,7 +10,7 @@ const contactData = [
     iconUrl: "/images/icons/contact_icon_1.svg",
     title: "Dirección",
     subTitle:
-      "Calle 28 385 (Esq. Copacabana), B7165 Mar Azul, Provincia de Buenos Aires",
+      "Calle 28 385 (Esq. Copacabana), Las Gaviotas, Partido de Villa Gesell, Buenos Aires, Argentina",
   },
   {
     iconUrl: "/images/icons/contact_icon_2.svg",

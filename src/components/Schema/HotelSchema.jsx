@@ -11,7 +11,7 @@ export default function HotelSchema() {
     address: {
       "@type": "PostalAddress",
       streetAddress: "Las Gaviotas",
-      addressLocality: "Mar de las Pampas",
+      addressLocality: "Partido de Villa Gesell",
       addressRegion: "Buenos Aires",
       addressCountry: "AR",
     },

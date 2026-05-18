@@ -77,7 +77,7 @@ const faqData = [
   },
   {
     title:
-      "¿A qué distancia se encuentra la playa y el centro de Mar de las Pampas?",
+      "¿A qué distancia se encuentra la playa y el centro de Las Gaviotas?",
     content:
       "El Apart se encuentra a 300 mts de la playa y a 650 mts del centro de la ciudad.",
   },
